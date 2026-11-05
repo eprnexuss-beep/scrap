@@ -1,0 +1,27 @@
+{
+  "name": "epr-nexuss-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "EPR Nexuss Scrap Marketplace — REST API (Express + MongoDB)",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "seed:admin": "node scripts/seed-admin.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.9",
+    "express": "^4.22.3",
+    "helmet": "^8.3.0",
+    "jose": "^6.2.14",
+    "mongoose": "^9.11.4",
+    "multer": "^2.5.0",
+    "nodemailer": "^10.3.1",
+    "zod": "^4.6.7"
+  }
+}
