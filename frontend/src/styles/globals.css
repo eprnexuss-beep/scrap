@@ -149,7 +149,7 @@ img { display: block; max-width: 100%; }
 
 
 .auth-page { min-height: 100vh; display: grid; grid-template-columns: minmax(360px, .75fr) minmax(620px, 1.25fr); background: white; }
-.auth-aside { background: linear-gradient(145deg, rgba(4,73,49,.93), rgba(3,47,36,.98)), url('/assets/recycling-facility.jpg') center/cover; color: white; padding: 44px 8%; display: flex; flex-direction: column; justify-content: space-between; }
+.auth-aside { background: linear-gradient(145deg, rgba(4,73,49,.93), rgba(3,47,36,.98)), url('/scrap/assets/recycling-facility.jpg') center/cover; color: white; padding: 44px 8%; display: flex; flex-direction: column; justify-content: space-between; }
 .auth-aside > div:nth-child(2) { max-width: 470px; }
 .auth-aside h1 { font-size: clamp(38px, 4vw, 58px); letter-spacing: -.05em; line-height: 1.05; margin: 18px 0; }
 .auth-aside > div:nth-child(2) > p { color: #c3d8cf; line-height: 1.8; font-size: 15px; }

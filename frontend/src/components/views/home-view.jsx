@@ -1,3 +1,4 @@
+import { publicAsset } from '@/lib/public-asset'
 import {
   ArrowRight,
   BatteryCharging,
@@ -104,7 +105,7 @@ export function HomeView() {
             </div>
           </div>
           <div className="hero__visual">
-            <img src="/assets/recycling-facility.jpg" alt="Industrial recycling facility" />
+            <img src={publicAsset('assets/recycling-facility.jpg')} alt="Industrial recycling facility" />
             <div className="hero__float hero__float--top">
               <ShieldCheck size={21} />
               <span>
@@ -184,7 +185,7 @@ export function HomeView() {
         </section>
         <section className="section benefit-grid" id="trust">
           <div className="benefit-visual">
-            <img src="/assets/metal-scrap.jpg" alt="Sorted industrial metal parts" />
+            <img src={publicAsset('assets/metal-scrap.jpg')} alt="Sorted industrial metal parts" />
             <Badge>
               <CheckCircle2 size={14} /> Compliance-first marketplace
             </Badge>

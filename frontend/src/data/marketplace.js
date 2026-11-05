@@ -1,7 +1,9 @@
+import { publicAsset } from '@/lib/public-asset'
+
 export const listings = [
-  { name: 'E-Waste (Mixed)', category: 'E-Waste', qty: '5 MT', price: '₹47,500/MT', location: 'Delhi NCR', image: '/assets/metal-scrap.jpg', status: 'Verified' },
-  { name: 'Aluminium Turnings', category: 'Metals', qty: '12 MT', price: '₹84,200/MT', location: 'Pune, MH', image: '/assets/aluminium-scrap.jpg', status: 'New lot' },
-  { name: 'Industrial Machinery', category: 'Metal Scrap', qty: '8 MT', price: '₹62,000/MT', location: 'Ahmedabad, GJ', image: '/assets/recycling-facility.jpg', status: 'Verified' },
+  { name: 'E-Waste (Mixed)', category: 'E-Waste', qty: '5 MT', price: '₹47,500/MT', location: 'Delhi NCR', image: publicAsset('assets/metal-scrap.jpg'), status: 'Verified' },
+  { name: 'Aluminium Turnings', category: 'Metals', qty: '12 MT', price: '₹84,200/MT', location: 'Pune, MH', image: publicAsset('assets/aluminium-scrap.jpg'), status: 'New lot' },
+  { name: 'Industrial Machinery', category: 'Metal Scrap', qty: '8 MT', price: '₹62,000/MT', location: 'Ahmedabad, GJ', image: publicAsset('assets/recycling-facility.jpg'), status: 'Verified' },
 ]
 
 export const sellerRows = [

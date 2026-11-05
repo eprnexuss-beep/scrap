@@ -1,4 +1,5 @@
 import path from 'node:path'
+import cors from 'cors';
 import fs from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import express from 'express'
@@ -9,6 +10,24 @@ import { apiRoutes } from './routes/index.js'
 
 export function createApp() {
   const app = express()
+
+  const allowedOrigins = [
+  'https://eprnexuss.com',
+  'https://www.eprnexuss.com',
+];
+
+app.use(cors({
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error('Origin not allowed by CORS'));
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
   app.disable('x-powered-by')
   app.set('trust proxy', 1) // correct client IPs behind nginx / a PaaS load balancer
 

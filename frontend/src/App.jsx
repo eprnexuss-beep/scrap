@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { GuestOnly, RequireRole } from '@/components/layout/route-guards'
 import NotFound from '@/pages/not-found'
 import { ScrollToHash } from '@/components/layout/scroll-to-hash'
@@ -41,10 +41,12 @@ import Page36 from '@/pages/seller/settings'
 import Page37 from '@/pages/seller/settlements'
 import ContactPage from '@/pages/contact'
 
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToHash />
+
       <Routes>
         <Route path="/admin-dashboard/audit" element={<RequireRole role="admin"><Page0 /></RequireRole>} />
         <Route path="/admin-dashboard/listings/:id" element={<RequireRole role="admin"><Page1 /></RequireRole>} />
@@ -56,6 +58,7 @@ export default function App() {
         <Route path="/admin-dashboard/settings" element={<RequireRole role="admin"><Page8 /></RequireRole>} />
         <Route path="/admin-dashboard/users" element={<RequireRole role="admin"><Page9 /></RequireRole>} />
         <Route path="/admin-dashboard/verifications" element={<RequireRole role="admin"><Page10 /></RequireRole>} />
+
         <Route path="/buyer/deals" element={<RequireRole role="buyer"><Page11 /></RequireRole>} />
         <Route path="/buyer/documents" element={<RequireRole role="buyer"><Page12 /></RequireRole>} />
         <Route path="/buyer/offers/:id" element={<RequireRole role="buyer"><Page14 /></RequireRole>} />
@@ -63,14 +66,20 @@ export default function App() {
         <Route path="/buyer" element={<RequireRole role="buyer"><Page16 /></RequireRole>} />
         <Route path="/buyer/saved" element={<RequireRole role="buyer"><Page17 /></RequireRole>} />
         <Route path="/buyer/settings" element={<RequireRole role="buyer"><Page18 /></RequireRole>} />
+
         <Route path="/deal/:id" element={<RequireRole role="admin"><Page19 /></RequireRole>} />
         <Route path="/deal" element={<RequireRole role="admin"><Page20 /></RequireRole>} />
+
         <Route path="/login" element={<GuestOnly><Page21 /></GuestOnly>} />
+
         <Route path="/marketplace/:id" element={<RequireRole role="buyer"><Page22 /></RequireRole>} />
         <Route path="/marketplace" element={<RequireRole role="buyer"><Page23 /></RequireRole>} />
+
         <Route path="/" element={<Page24 />} />
+
         <Route path="/register" element={<GuestOnly><Page25 /></GuestOnly>} />
         <Route path="/reset-password" element={<Page26 />} />
+
         <Route path="/seller/deals" element={<RequireRole role="seller"><Page27 /></RequireRole>} />
         <Route path="/seller/documents" element={<RequireRole role="seller"><Page28 /></RequireRole>} />
         <Route path="/seller/enquiries" element={<RequireRole role="seller"><Page29 /></RequireRole>} />
@@ -81,11 +90,15 @@ export default function App() {
         <Route path="/seller" element={<RequireRole role="seller"><Page35 /></RequireRole>} />
         <Route path="/seller/settings" element={<RequireRole role="seller"><Page36 /></RequireRole>} />
         <Route path="/seller/settlements" element={<RequireRole role="seller"><Page37 /></RequireRole>} />
+
         <Route path="/admin-dashboard/offers" element={<RequireRole role="admin"><AdminOffers /></RequireRole>} />
         <Route path="/contact" element={<ContactPage />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
+
       <WhatsAppButton />
-    </BrowserRouter>
+    </>
   )
 }
+
