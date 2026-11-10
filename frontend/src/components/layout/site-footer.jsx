@@ -34,7 +34,7 @@ export function SiteFooter() {
 
         <div className="col-span-2 flex flex-col items-start gap-2.5 lg:col-span-1">
           <b className={heading}>SUPPORT</b>
-          <a href="tel:+919286595966" className={link}>Call +91 9286595966</a>
+          <a href="tel:+919220386699" className={link}>Call +91 9220386699</a>
           <a href="mailto:info@eprnexuss.com" className={`break-all ${link}`}>Email- info@eprnexuss.com</a>
           <span className="text-[12px] text-[#9aa8b7] sm:text-[13px]">Mon–Sat · 10am–6pm</span>
         </div>
@@ -49,7 +49,7 @@ export function SiteFooter() {
         <div className="flex flex-col gap-1">
           <b className={label}>PHONE</b>
           <div className="flex flex-wrap gap-x-1 text-[12px] text-[#9aa8b7] sm:text-[13px]">
-            <a href="tel:+919286595966" className="hover:text-white">+91 9286595966</a>
+            <a href="tel:+919220386699" className="hover:text-white">+91 9220386699</a>
             <span>·</span>
             <a href="tel:01204605014" className="hover:text-white">0120-4605014</a>
           </div>
